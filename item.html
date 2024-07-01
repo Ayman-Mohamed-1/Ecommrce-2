@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styal.css">
+    <link rel="stylesheet" href="./css/item.css">
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- googli font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container top-nav">
+        <a href="#"><img src="./img/logo-black.png" alt=""></a>
+        <form action="" class="search">
+            <input type="search" placeholder="Search for products...">
+            <button type="submit">search</button>
+        </form>
+
+        <div class="cart-header">
+            <div  onclick="open_cart()" class="icon-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="count_item">0</span>
+            </div>
+            <div class="total-price">
+                <p>My Cart:</p>
+                <p class="price_csrt_head">$0</p>
+            </div>
+        </div>
+    </div> 
+    <nav>
+        <div class="links container">
+            <ul>
+                <li class="active"><a href="">home</a></li>
+                <li><a href="">all products</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href=""></a>countact</li>
+            </ul>
+
+            <div class="loging-signup">
+                <a href="#">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                <a href="#">sign up <i class="fa-solid fa-user-plus"></i></a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<!-- cart -->
+<div class="cart">
+
+    <div class="top-cart">
+        <h3>My cart <span class="cart_item"></span></h3>
+        <span onclick="close_cart()" class="close-cart"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+
+    <div class="items-in-cart">
+        <!-- item -->
+    </div>
+
+    <div class="bottom-cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="pricee_cart_total">$0</p>
+            </div>
+            <div class="button-cart">
+                <a href="#" class="btn-cart">Proceed to checkout</a>
+                <button class="btn-cart trans-bg">Shop more</button>
+            </div>
+    </div>
+</div>
+<!-- cart end -->
+<!-- item_detail -->
+<div class="item_detail">
+    <div class="container">
+            <div class="img_item">
+                <div class="big_img">
+                    <img id="bigimg" src="img/product/product-1.jpg" alt="">
+                </div>
+                <div class="sm_imgs">
+                    <img onclick="ChangeItemImage(this.src)" src="img/product/product-1.jpg" alt="">
+                    <img onclick="ChangeItemImage(this.src)" src="img/product/product-2.jpg" alt="">
+                    <img onclick="ChangeItemImage(this.src)" src="img/product/product-3.jpg" alt="">
+                    <img onclick="ChangeItemImage(this.src)" src="img/product/product-4.jpg" alt="">
+                </div>
+            </div>
+            <div class="details_item">
+                <h1 class="name">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="price">
+                    <p><span>$0000</span></p>
+                    <p class="old_price">$00000</p>
+                </div>
+                <h5>Avaaailability: <span>In Stock</span></h5>
+                <h5>SKU: <span>Lorem ipsum dolor sit amet.</span></h5>
+                <p class="text_p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam necessitatibus quibusdam fugiat quae nam voluptatibus harum inventore, ipsum unde cupiditate, exercitationem quis cum, at veritatis magnam minus cumque distinctio eos sequi voluptatem repudiandae delectus. Perferendis provident sit eveniet culpa. Tempore error voluptate facere ad aliquid! Nesciunt delectus quas fugit tenetur!</p>
+                <h4>Hurry Up! Only 98 products left in stock.</h4>
+                <button>add to cart <i class="fa-solid fa-cart arrow down"></i></button>
+                <div class="icons">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-solid fa-sliders"></i></span>
+                    <span><i class="fa-solid fa-print"></i></span>
+                    <span><i class="fa-solid fa-share-nodes"></i></span>
+                </div>
+
+            </div>
+    </div>
+</div>
+<!-- item_detail_end -->
+
+<!-- slide -->
+<section class="slide slide-sale">
+    <div class="container">
+        <div class="sale-sec mySwiper">
+            <div class="top-slide">
+                <h2>on sale <span>product</span></h2>
+            </div>
+            <!-- start -->
+                <div id="swiper_items_sale" class="products swiper-wrapper">
+
+                    <!--  -->
+                </div>
+            <!-- end -->
+            <!-- swiper-button -->
+            <div class="swiper-button-next btn-swip"></div>
+            <div class="swiper-button-prev btn-swip"></div>
+            <!-- swiper-button -->   
+        </div>
+    </div>
+</section>
+<!-- slide end-->
+
+<!-- back to top -->
+<div class="back_to_top">
+    <p>back to top</p>
+</div>
+<!-- back to top end-->
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="big_row">
+            <img src="img/logo-white.png" alt="">
+            <div class="hotline">
+                <i class="fa-solid fa-headset"></i>
+                <div class="text">
+                    <h5>Hotline Free 24/24</h5>
+                    <h6>(+100) 123 456 7890</h6>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, aut.</p>
+        </div>
+        <div class="row">
+            <h4>FAQs & Help</h4>
+            <div class="links">
+                <a href="#">F.A.Q.S</a>
+                <a href="#">Ordaring Tracking</a>
+                <a href="#">Contacts</a>
+                <a href="#">Events</a>
+                <a href="#"> help center</a>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Shipping & Deliver</h4>
+            <div class="links">
+                <a href="#">F.A.Q.S</a>
+                <a href="#">Ordaring Tracking</a>
+                <a href="#">Contacts</a>
+                <a href="#">Events</a>
+                <a href="#"> help center</a>
+            </div>
+        </div>
+        <div class="row">
+            <h4>information</h4>
+            <div class="links">
+                <a href="#">F.A.Q.S</a>
+                <a href="#">Ordaring Tracking</a>
+                <a href="#">Contacts</a>
+                <a href="#">Events</a>
+                <a href="#"> help center</a>
+            </div>
+        </div>
+    </div>
+    <div class="botton_footer">
+        <div class="container">
+           <p>Copyright &copy; <span>Topico</span> all right <p> 
+            <div class="payment_img">
+                <img src="img/payment-1.png" alt="">
+                <img src="img/payment-2.png" alt="">
+                <img src="img/payment-3.png" alt="">
+                <img src="img/payment-4.png" alt="">
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+<!-- js -->
+    <script  src="./js/mian.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="./js/swiper.js"></script>
+    <!--items_home  -->
+    <script src="./js/items_home.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+:root{
+    --main-color: #fcb700;
+    --dark: #222222;
+    --p: #666666;
+    --dark-red: #d01418;
+    --border-color: #6666662a;
+    --name-item: #0066c0; 
+}
+
+.top_page{
+    text-align: center;
+    padding: 50px 0;
+}
+.top_page h1{
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 25px;
+}
+.top_page p{
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+    color: var(--p);
+}
+/* al_products */
+.all_products .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.all_products .filter{
+    background-color: white;
+    width: 280px;
+    text-transform: uppercase;
+    padding: 25px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+.all_products .filter input:checked{
+    accent-color: var(--main-color);
+}
+.all_products .filter h4{
+    margin: 25px 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+.all_products .filter span{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.all_products .filter .filter_item .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.all_products .filter .filter_item .item .color{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.all_products .products_dev{
+    width: calc(100% - 300px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+}
+.all_products .products_dev .product{
+    width: 22%;
+    margin-bottom: 30px;
+}
+.pagination{
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.pagination .btn_page{
+    font-size: 22px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.pagination .btn_page:hover{
+    color: var(--main-color);
+}
+.pagination .num_page{
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+
+}
+.pagination .num_page.active,
+.pagination .num_page:hover{
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+}
